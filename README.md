@@ -1283,7 +1283,7 @@ The same process can be used to override tasks from other makefiles loaded using
 
 <a name="usage-platform-override"></a>
 #### Platform Override
-If you want to override a task (or specific attributes in a task) for specific platforms, you can define an override task with the platform name (currently Linux, Windows, and macOS) under the specific task.<br>
+If you want to override a task (or specific attributes in a task) for specific platforms, you can define an override task with the platform name (currently "linux", "windows", and "mac") under the specific task.<br>
 For example:
 
 ```toml
@@ -1295,6 +1295,10 @@ echo "Hello World From Unknown"
 [tasks.hello-world.linux]
 script = '''
 echo "Hello World From Linux"
+
+[tasks.hello-world.mac]
+script = '''
+echo "Hello World From macOS"
 '''
 ```
 
